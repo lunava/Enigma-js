@@ -2,7 +2,7 @@
   "name": "enigma.js",
   "version": "1.0.0",
   "description": "Javascript of the Enigma engine, originally built with java.",
-  "main": "Alphabet.js",
+  "main": "Enigma/Alphabet.js",
   "scripts": {
     "test": "mocha"
   },
