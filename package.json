@@ -2,7 +2,7 @@
   "name": "enigma.js",
   "version": "1.0.0",
   "description": "Javascript of the Enigma engine, originally built with java.",
-  "main": "Enigma/Alphabet.js",
+  "main": "Enigma/index.js",
   "scripts": {
     "test": "mocha"
   },
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/lunava/Enigma-js/issues"
   },
-  "homepage": "https://github.com/lunava/Enigma-js#readme"
+  "homepage": "https://github.com/lunava/Enigma-js#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2"
+  }
 }
