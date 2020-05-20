@@ -5,7 +5,7 @@ class EnigmaError extends Error {
     constructor(msg) {
         super(msg);
     }
-    static error (msg, ...args) {
+    static error(msg, ...args) {
         return new EnigmaError('${msg}, ${args}');
     }
 }

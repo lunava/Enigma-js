@@ -35,7 +35,7 @@ class CycleList {
     addCycle(cycle) {
         for (let p = this; p != null; p = p.tail) {
             if (p.tail == null) {
-                p.tail = list(cycle);
+                p.tail = CycleList.list(cycle);
                 break;
             }
         }
@@ -44,7 +44,7 @@ class CycleList {
     /** returns the number of characters in this permutation cycle.
      * @return int representing size
      */
-    sizeOfCycle() {
+    size() {
         let size = 0;
         for (let p = this; p != null; p = p.tail) {
             size += p.head.length;
