@@ -21,10 +21,22 @@ Main(args);
 function Main(args){
     validArgs(args);
     _config = getInput(args[0]);
-    console.log(_config);
     if (args.length > 1) {
+        _input = getInput(args[1]);
     }
+    if (args.length > 2) {
+        _output = args[2]
+    }
+
 }
+
+/**Configure an Enigma machine from the contents of configuration
+ *
+ */
+function processMachine() {
+
+}
+
 /** returns a reading stream of this file name.
  * @param name of the file
  */
@@ -32,6 +44,13 @@ function getInput(name) {
     const data = fs.readFileSync(name, 'UTF-8');
     let lines = data.split(/\r?\n/);
     return lines;
+}
+
+/** returns a reading stream of the output.
+ * @param name of file
+ */
+function getOutput(name) {
+
 }
 
 /** Checks if args are conventional to our enigma machine.

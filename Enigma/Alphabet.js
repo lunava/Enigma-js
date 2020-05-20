@@ -1,6 +1,7 @@
 /** Representation of an Alphabet.
  * @author Luis Navarrete
  */
+const e = require('./EnigmaError.js')
  class Alphabet{
     /** Constructor for alphabet, accounts for size and chars.
      * @param chars characters used for making alphabet
@@ -13,7 +14,7 @@
             this.chars = chars;
         }
         else{
-            throw new EnigmaError('Invalid Args');
+            e.EnigmaError.error('Invalid Alphabet');
         }
         this.size = this.chars.length;
     }
@@ -22,7 +23,7 @@
      * @param chars character representation
      */
     validInput(chars) {
-        let charArray = chars.toArray();
+        let charArray = chars.split('');
         let alpha = new Map();
         for (let c of charArray) {
            if (alpha.has(c)) {
