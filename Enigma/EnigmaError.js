@@ -6,8 +6,7 @@ class EnigmaError extends Error {
         super(msg);
     }
     static error(msg, ...args) {
-        console.error(msg + args);
-        process.exit(1)
+        throw new EnigmaError(msg,  args);
     }
 }
 exports.EnigmaError = EnigmaError;

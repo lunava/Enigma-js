@@ -14,8 +14,7 @@ class CycleList {
     static list(cycles) {
         let result = null, pointer = null;
         let pattern = '\\(([^)]+)\\)';
-        let match = cycles.matchAll(pattern);
-        let lst = [...match];
+        let match = cycles.matchAll(pattern), lst = [...match];
         for (let elem of lst) {
             let cycle = elem[1]
             if (result == null) {
